@@ -1,0 +1,38 @@
+<div ng-init="loadVeiculos()">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Veículos
+      <div class="pull-right">
+        <a ng-href="#cadastroVeiculo">
+          <span class="glyphicon glyphicon-plus"></span> Novo
+        </a>
+      </div>
+    </div>
+    <div class="panel-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th width="30%">Placa</th>
+            <th width="33%">Renavam</th>
+            <th width="33%">Proprietário</th>
+            <th width="4%"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="veiculo in veiculos">
+            <td>{{veiculo.placa}}</td>
+            <td>{{veiculo.renavam}}</td>
+            <td>{{veiculo.proprietario.nome}}</td>
+            <td>
+              <a ng-href="#edicaoVeiculo/{{veiculo.placa}}">
+                <span class="glyphicon glyphicon-edit" title="Editar"></span></a>
+            </td>
+            <td>
+              <a ng-click="deleteVeiculo(veiculo)" style="cursor:pointer">
+              <span class="glyphicon glyphicon-remove" title="Remover"></span></a>
+            </td>
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>
