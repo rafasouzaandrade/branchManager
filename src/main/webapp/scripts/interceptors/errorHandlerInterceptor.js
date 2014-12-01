@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sampleNgFrontendApp').factory('errorHandlerInterceptor', function($q, growl, BACKEND_URL){
+angular.module('branchManagerApp').factory('errorHandlerInterceptor', function($q, growl, BACKEND_URL){
   return{
 
     request : function(config) {
@@ -38,6 +38,6 @@ angular.module('sampleNgFrontendApp').factory('errorHandlerInterceptor', functio
   };
 });
 
-angular.module('sampleNgFrontendApp').config(function($httpProvider){
+angular.module('branchManagerApp').config(function($httpProvider){
   $httpProvider.interceptors.push('errorHandlerInterceptor');
 });

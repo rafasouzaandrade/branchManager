@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sampleNgFrontendApp').service('veiculoService', function($http){
+angular.module('branchManagerApp').service('veiculoService', function($http){
 
   this.loadVeiculos = function() {
     return $http.get('veiculo');

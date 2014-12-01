@@ -2,12 +2,13 @@
 
 /**
  * @ngdoc function
- * @name sampleNgFrontendApp.controller:MainCtrl
+ * @name branchManagerApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the sampleNgFrontendApp
+ * Controller of the branchManagerApp
  */
-angular.module('sampleNgFrontendApp')
+
+angular.module('branchManagerApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

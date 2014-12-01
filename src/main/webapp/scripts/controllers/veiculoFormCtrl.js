@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name sampleNgFrontendApp.controller:VeiculoCtrl
+ * @name branchManagerApp.controller:VeiculoCtrl
  * @description
  * # VeiculoCtrl
- * Controller of the sampleNgFrontendApp
+ * Controller of the branchManagerApp
  */
-var veiculoFormCtrl = angular.module('sampleNgFrontendApp').controller('VeiculoFormCtrl', function ($scope,$routeParams, $location, veiculoService, growl, formData) {
+var veiculoFormCtrl = angular.module('branchManagerApp').controller('VeiculoFormCtrl', function ($scope,$routeParams, $location, veiculoService, growl, formData) {
   $scope.veiculo = formData.data;
 
   $scope.save = function(veiculo) {

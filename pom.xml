@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.softplan.ungp</groupId>
-	<artifactId>sample-ng-backend</artifactId>
+	<artifactId>branchManager</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>sample-ng-backend</name>
+	<name>branchManager</name>
 
 
 	<properties>
@@ -242,17 +242,17 @@
 	<build>
 		<plugins>
 			<plugin>
-			  <groupId>org.eclipse.jetty</groupId>
-			  <artifactId>jetty-maven-plugin</artifactId>
-			  <version>9.2.2.v20140723</version>
-			   <configuration>
-			        <connectors>
-			            <!-- work around file locking on windows -->
-			            <connector implementation="org.mortbay.jetty.bio.SocketConnector">
-			                <port>8080</port><!-- this connector defaults to 1300 for some reason -->
-			            </connector>
-			        </connectors>
-			    </configuration>
+			  <groupId>org.mortbay.jetty</groupId>
+			  <artifactId>maven-jetty-plugin</artifactId>
+			  <version>6.1.18</version>
+			  <configuration>
+		        <connectors>
+            <!-- work around file locking on windows -->
+            <connector implementation="org.mortbay.jetty.bio.SocketConnector">
+                <port>8080</port><!-- this connector defaults to 1300 for some reason -->
+            </connector>
+        </connectors>
+		      </configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

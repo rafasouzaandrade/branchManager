@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name sampleNgFrontendApp.controller:VeiculoCtrl
+ * @name branchManagerApp.controller:VeiculoCtrl
  * @description
  * # VeiculoCtrl
- * Controller of the sampleNgFrontendApp
+ * Controller of the branchManagerApp
  */
-var veiculoListCtrl = angular.module('sampleNgFrontendApp').controller('VeiculoListCtrl', function ($scope,$routeParams, $location, veiculoService, growl) {
+var veiculoListCtrl = angular.module('branchManagerApp').controller('VeiculoListCtrl', function ($scope,$routeParams, $location, veiculoService, growl) {
 
   $scope.loadVeiculos = function() {
 
