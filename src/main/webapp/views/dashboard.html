@@ -4,12 +4,21 @@
          <h1 class="page-header">
              Dashboard <small>Projetos Ativos</small>
          </h1>
+<!--          <form class="navbar-form navbar-left" role="search" style="width: 100%"> -->
+<!-- 		    <div class="form-group" style="width: 100%"> -->
+<!-- 		        <input type="text" class="form-control" placeholder="Buscar Projetos" ng-model="searchText" style="width: 9%"> -->
+<!-- 			    <button type="submit" class="btn btn-default" style="margin-left: -4px;"><span class="glyphicon glyphicon-search"></span></button> -->
+<!-- 		    </div> -->
+<!-- 		</form> -->
+         <div class="input-group">
+  			<input type="text" class="form-control" placeholder="Filtrar Projetos" ng-model="searchText">
+         	<span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true" style="position: static;"></span>
+		</div>
      </div>
  </div>
-
+ <br/>
   <div class="row">
-  	  
-      <div class="col-lg-3 col-md-6" ng-repeat="projeto in projetos">
+      <div class="col-lg-3 col-md-6" ng-repeat="projeto in projetos | filter:searchText">
           <div class="panel panel-primary">
               <div class="panel-heading">
                   <div class="row">
@@ -17,13 +26,13 @@
                           <i class="fa fa-support fa-5x"></i>
                       </div>
                       <div class="col-xs-9 text-right">
-                          <div class="huge">{{projeto.nome}}</div>
+                          <div class="huge" style="white-space: nowrap;">{{projeto.nome}}</div>
                       </div>
                   </div>
               </div>
               <a href="#">
                   <div class="panel-footer">
-                      <span class="pull-left">View Details</span>
+                      <span class="pull-left">Ver Detalhes</span>
                       <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                       <div class="clearfix"></div>
                   </div>
@@ -31,8 +40,7 @@
           </div>
       </div>
   </div>
-  <!-- /.row -->
-
+  <!-- 
   <div class="row">
       <div class="col-lg-12">
           <div class="panel panel-default">
@@ -45,7 +53,6 @@
           </div>
       </div>
   </div>
-  <!-- /.row -->
 
   <div class="row">
       <div class="col-lg-4">
@@ -182,3 +189,4 @@
           </div>
       </div>
   </div>
+  -->
