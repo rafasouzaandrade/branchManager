@@ -11,7 +11,7 @@ public class BranchManagerApplication extends ResourceConfig {
 
     public BranchManagerApplication() {
         System.out.println("Iniciando ApplicationPath...");
-        super.packages(true, "ungp.sampleng");
+        super.packages(true, "ungp.sampleng.backend");
         super.register(CORSResponseFilter.class);
     }
 

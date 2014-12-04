@@ -1,18 +1,15 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name branchManagerApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the branchManagerApp
- */
+angular.module('branchManagerApp').controller('MainCtrl', function($scope, projetoService) {
+	$scope.projetos = [];
 
-angular.module('branchManagerApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+	$scope.loadProjetos = function() {
+		projetoService.loadProjetos().success(function(projetos) {
+			$scope.projetos = projetos;
+		});
+	};
+
+	$scope.$watch('$viewContentLoaded', function() {
+		$scope.loadProjetos();
+	});
+});
