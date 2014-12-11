@@ -22,6 +22,8 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="css/gitGraph/gitgraph.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,7 +38,7 @@
 
     <div id="wrapper">
     
-    	<div ng-include="'views/menu.html'"></div>
+    	<div ng-include="'partials/menu.html'"></div>
         <div id="page-wrapper">
             <div class="container-fluid">
             	<div ng-view=""></div>
@@ -53,6 +55,7 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/gitGraph/gitgraph.js"></script>
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/json3/lib/json3.js"></script>
@@ -67,6 +70,7 @@
 <script src="scripts/constants.js"></script>
 <script src="scripts/interceptors/errorHandlerInterceptor.js"></script>
 <script src="scripts/controllers/mainCtrl.js"></script>
+<script src="scripts/controllers/detalhesProjetoCtrl.js"></script>
 <script src="scripts/services/projetoService.js"></script>
 
 </html>

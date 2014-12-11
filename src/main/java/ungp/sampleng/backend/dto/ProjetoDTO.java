@@ -2,14 +2,14 @@ package ungp.sampleng.backend.dto;
 
 public class ProjetoDTO {
 
-	private String id;
+	private Integer id;
 	private String nome;
 
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

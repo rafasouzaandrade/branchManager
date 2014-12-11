@@ -9,11 +9,11 @@
  */
 angular.module('branchManagerApp').config(function($routeProvider) {
 	$routeProvider.when('/', {
-		templateUrl : 'views/dashboard.html',
+		templateUrl : 'partials/dashboard.html',
 		controller : 'MainCtrl'
-	}).when('/veiculos', {
-		templateUrl : 'views/veiculos.html',
-		controller : 'VeiculoListCtrl'
+	}).when('/projetos/:idProjeto', {
+		templateUrl : 'partials/detalhesProjeto.html',
+		controller : 'DetalhesProjetoCtrl'
 	}).otherwise({
 		redirectTo : '/'
 	});
