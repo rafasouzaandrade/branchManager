@@ -12,6 +12,7 @@ Funcionalidade: Infração
 
   Cenario: Buscar infracao com id 1
     Quando buscar infracao com id = 1
+    E buscar
     Entao o sistema deve retornar a infracao:
       | id | proprietario | logradouro | data da infracao |
       | 1  | 11122233344  | 1          | 25/11/2014       |
